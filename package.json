@@ -1,0 +1,41 @@
+{
+  "name": "the-undertaker",
+  "version": "1.0.0",
+  "description": "mutates state within an immutable object using paths",
+  "main": "dist/the-undertaker.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register src/**/*.spec.js",
+    "prepublish": "babel -D -d dist/ src/",
+    "postpublish": "rm -rf dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/distributedlife/the-undertaker.git"
+  },
+  "keywords": [
+    "immutablejs",
+    "state",
+    "mutation",
+    "selector"
+  ],
+  "author": "Ryan Boucher",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/distributedlife/the-undertaker/issues"
+  },
+  "homepage": "https://github.com/distributedlife/the-undertaker#readme",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^3.4.2"
+  }
+}
