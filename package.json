@@ -1,6 +1,6 @@
 {
   "name": "the-undertaker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mutates state within an immutable object using paths",
   "main": "dist/the-undertaker.js",
   "scripts": {
