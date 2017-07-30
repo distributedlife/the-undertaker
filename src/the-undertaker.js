@@ -67,7 +67,7 @@ class TheUndertaker {
     return tree.set(key, elements.push(TheUndertaker.undertake(newMap, tail, updater)));
   }
 
-  static undertake(tree, path, updater) {
+  static undertake(tree = emptyMap, path, updater) {
     const [head, ...tail] = path;
 
     if (!tail.length) {

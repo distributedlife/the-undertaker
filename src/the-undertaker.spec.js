@@ -94,6 +94,35 @@ describe('The Undertaker', () => {
     });
   });
 
+  it('creates something from undefined', () => {
+    const tree = fromJS({});
+
+    const result = theUndertaker(undefined, ['a', 'b|id:0', 'c', 'd|id:"0"', 'e|id:0', 'f'], () => 'NEW VALUE');
+
+    expect(result.toJS()).to.eql({
+      a: {
+        b: [
+          {
+            id: 0,
+            c: {
+              d: [
+                {
+                  id: '0',
+                  e: [
+                    {
+                      id: 0,
+                      f: 'NEW VALUE',
+                    },
+                  ],
+                },
+              ],
+            },
+          },
+        ],
+      },
+    });
+  });
+
   it('handles paths without array references', () => {
     const tree = fromJS({
       a: {
