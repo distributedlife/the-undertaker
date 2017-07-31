@@ -18,6 +18,10 @@
     "mutation",
     "selector"
   ],
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "author": "Ryan Boucher",
   "license": "BSD-2-Clause",
   "bugs": {
